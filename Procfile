@@ -1,0 +1,1 @@
+web: gunicorn watermark.wsgi --log-file -
