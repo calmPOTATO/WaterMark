@@ -18,7 +18,7 @@ def overlay_watermark(instance, sender, **kwargs):
     width = instance.photo_width
     height = instance.photo_height
     print(width, height)
-    watermark = Photo.objects.filter(title="test")
+    watermark = Image.open('static/mark/mark.PNG')
     photo.paste(watermark, (0, 0), watermark)
     photo = photo.resize((width, height), Image.ANTIALIAS)
     photo.save(instance.photo.path)
